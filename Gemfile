@@ -27,7 +27,7 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 gem 'temporal-ruby', git: 'https://github.com/coinbase/temporal-ruby.git'
-gem 'google-protobuf', '~> 3.19'
+gem 'google-protobuf', '~> 3.19' # see  https://github.com/coinbase/temporal-ruby/commit/0d3a8bb9037d4b736172b8afcbe6dbe65edb7cf8
 
 gem 'mutex_m'
 gem 'bigdecimal'
