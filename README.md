@@ -1,24 +1,11 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# This is to test a worker connection to Temporal cloud
 
-Things you may want to cover:
+1. bundle install 
+2. add client_key, client_cert, root_cert to  `/certs` folder
+3. start worker ` bundle exec ruby lib/temporal_worker.rb` 
 
-* Ruby version
+I get this error currently: 
+```E, [2024-08-07T18:53:14.604189 #24875] ERROR -- temporal_client: Unable to poll Workflow task queue {"namespace":"testing-sdk.gsllh","task_queue":"default","error":"#<GRPC::Unavailable: 14:errors resolving testing-sdk.gsllh.tmprl.cloud:7233:7233: [field:hostname lookup error:address lookup failed for testing-sdk.gsllh.tmprl.cloud:7233:7233: Domain name not found]. debug_error_string:{UNKNOWN:Error received from peer  {grpc_message:\"errors resolving testing-sdk.gsllh.tmprl.cloud:7233:7233: [field:hostname lookup error:address lookup failed for testing-sdk.gsllh.tmprl.cloud:7233:7233: Domain name not found]\", grpc_```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I have tested my certs using The Python SDK from Temporal and can get a workflow to trigger
